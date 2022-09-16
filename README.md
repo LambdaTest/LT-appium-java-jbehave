@@ -36,10 +36,11 @@ Before you can start performing App automation testing with Appium, you would ne
 
 - Ensure you have the [Java client library](https://github.com/appium/java-client) installed for Selenium and Appium.
 - Download and install **Maven** following the steps from [the official website](https://maven.apache.org/). Maven can also be installed easily on **Linux/MacOS** using [**Homebrew**](https://brew.sh/) package manager.
+- Use JDK 8 or the higher version for better results.
 
 ### Clone The Sample Project
 
-Clone the LambdaTest’s :link: [LT-appium-java](https://github.com/LambdaTest/LT-appium-java) repository and navigate to the code directory as shown below:
+Clone the LambdaTest’s :link: [LT-appium-java-jbehave](https://github.com/LambdaTest/LT-appium-java-jbehave) repository and navigate to the code directory as shown below:
 
 ```js
 git clone https://github.com/LambdaTest/LT-appium-java-jbehave
@@ -50,20 +51,20 @@ cd LT-appium-java-jbehave
 
 Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-java) or access the [Automation Dashboard](https://appautomation.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-java).
 
-Set LambdaTest `Username` and `Access Key` in environment variables.
+Set LambdaTest `Username` and `AccessKey` in environment variables.
 
 **For Linux/macOS:**
 
 ```js
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME" \
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+export LT_USERNAME=YOUR_LAMBDATEST_USERNAME \
+export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
 **For Windows:**
 
 ```js
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME" `
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+set LT_USERNAME=YOUR_LAMBDATEST_USERNAME `
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
 ### Upload Your Application
