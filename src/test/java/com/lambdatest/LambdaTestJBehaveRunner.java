@@ -80,16 +80,16 @@ public class LambdaTestJBehaveRunner {
 
         String username = System.getenv("LT_USERNAME");
         if(username == null) {
-            username = (String) config.get("user");  //Add LambdaTest username here
+            username = "user";  //Add LambdaTest username here
         }
 
         String accessKey = System.getenv("LT_ACCESS_KEY");
         if(accessKey == null) {
-            accessKey = (String) config.get("key");   //Add LambdaTest accessKey here
+            accessKey = "key";   //Add LambdaTest accessKey here
         }
 
 
-        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@mobile-hub.lambdatest.com/wd/hub"), capabilities);
     }
 
     @After
