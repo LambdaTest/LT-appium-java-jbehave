@@ -60,7 +60,7 @@ public class LambdaTestJBehaveRunner {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("app","APP_URL"); //Add app url here
+        capabilities.setCapability("app","APP_URL");    //Enter app_url here
 
         Map<String, String> envCapabilities = (Map<String, String>) envs.get(taskID);
         Iterator it = envCapabilities.entrySet().iterator();
@@ -78,18 +78,13 @@ public class LambdaTestJBehaveRunner {
             }
         }
 
-        String username = System.getenv("LT_USERNAME");
-        if(username == null) {
-            username = "user";  //Add LambdaTest username here
-        }
-
-        String accessKey = System.getenv("LT_ACCESS_KEY");
-        if(accessKey == null) {
-            accessKey = "key";   //Add LambdaTest accessKey here
-        }
+        String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");  //Replace YOUR_LT_USERNAME with your LambdaTest username
 
 
-        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@mobile-hub.lambdatest.com/wd/hub"), capabilities);
+        String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); //Replace YOUR_LT_ACCESS_KEY with your LambdaTest accessKey
+
+
+        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
     }
 
     @After
