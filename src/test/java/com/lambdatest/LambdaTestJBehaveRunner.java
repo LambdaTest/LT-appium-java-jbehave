@@ -60,7 +60,7 @@ public class LambdaTestJBehaveRunner {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("app","APP_URL");    //Enter app_url here
+        capabilities.setCapability("app","lt://proverbial-android");    //Enter app_url here
 
         Map<String, String> envCapabilities = (Map<String, String>) envs.get(taskID);
         Iterator it = envCapabilities.entrySet().iterator();
