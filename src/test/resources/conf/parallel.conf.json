@@ -1,7 +1,10 @@
 {
   "capabilities": {
     "build": "jbehave-LambdaTest-AppAutomate-Parallel",
-    "name": "Parallel Test 1"
+    "name": "Android App Automation Parallel Test",
+    "visual": true,
+    "devicelog": true,
+    "network": false
   },
   "environments": [
     {
@@ -13,11 +16,6 @@
       "platformName": "android",
       "deviceName": "OnePlus.*",
       "platformVersion": "12"
-    },
-    {
-      "platformName": "android",
-      "deviceName": "Pixel.*",
-      "platformVersion": "13"
     }
   ]
 }
