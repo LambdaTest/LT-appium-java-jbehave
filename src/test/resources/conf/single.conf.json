@@ -1,6 +1,4 @@
 {
-  "server": "mobile-hub.lambdatest.com",
-
   "capabilities": {
     "build": "jbehave-LambdaTest-AppAutomate-Single",
     "name": "Single Test 1"
@@ -9,8 +7,8 @@
   "environments": [
     {
     "platformName": "android",
-    "deviceName": "Galaxy S21 5G",
-    "platformVersion": "11"
+    "deviceName": ".*",
+    "platformVersion": "12"
     }
   ]
 }

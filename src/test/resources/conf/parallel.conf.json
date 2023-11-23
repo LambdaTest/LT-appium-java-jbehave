@@ -1,26 +1,23 @@
 {
-  "server": "mobile-hub.lambdatest.com",
-
   "capabilities": {
     "build": "jbehave-LambdaTest-AppAutomate-Parallel",
     "name": "Parallel Test 1"
   },
-
   "environments": [
     {
       "platformName": "android",
-      "deviceName": "Galaxy S21 5G",
+      "deviceName": "Galaxy.*",
       "platformVersion": "11"
     },
     {
       "platformName": "android",
-      "deviceName": "OnePlus 10 Pro",
+      "deviceName": "OnePlus.*",
       "platformVersion": "12"
     },
     {
       "platformName": "android",
-      "deviceName": "Pixel 3a",
-      "platformVersion": "10"
+      "deviceName": "Pixel.*",
+      "platformVersion": "13"
     }
   ]
 }
