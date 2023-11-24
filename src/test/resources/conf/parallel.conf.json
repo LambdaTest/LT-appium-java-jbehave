@@ -14,8 +14,8 @@
     },
     {
       "platformName": "android",
-      "deviceName": "OnePlus.*",
-      "platformVersion": "12"
+      "deviceName": "Pixel.*",
+      "platformVersion": "13"
     }
   ]
 }
