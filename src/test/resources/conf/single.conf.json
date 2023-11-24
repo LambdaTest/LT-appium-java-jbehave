@@ -1,14 +1,17 @@
 {
   "capabilities": {
     "build": "jbehave-LambdaTest-AppAutomate-Single",
-    "name": "Single Test 1"
+    "name": "Single Test",
+    "visual": true,
+    "devicelog": true,
+    "network": false,
+    "autoGrantPermissions": true
   },
-
   "environments": [
     {
-    "platformName": "android",
-    "deviceName": ".*",
-    "platformVersion": "12"
+      "platformName": "android",
+      "deviceName": ".*",
+      "platformVersion": "12"
     }
   ]
 }
