@@ -1,0 +1,33 @@
+trigger:
+  branches:
+    include:
+      - main
+      - master
+      - fix/appium-tests  # Add any other branches you want to trigger the pipeline
+
+pool:
+  name: 'Default'
+
+# ==============================
+# Variable Group
+# ==============================
+variables:
+  - group: LambdaTest-Credentials  # Assuming you have a variable group for credentials
+
+# ==============================
+# Steps
+# ==============================
+steps:
+
+  # Checkout the repo to get the latest changes
+  - checkout: self
+    clean: true
+
+  # Run Android tests with the 'android' profile
+  - script: |
+      echo Running Android Tests with Appium
+      mvn test -P single
+    displayName: 'Run Android Tests'
+    env:
+      LT_USERNAME: $(LT_USERNAME)  # LambdaTest username (securely injected from variable group)
+      LT_ACCESS_KEY: $(LT_ACCESS_KEY)  # LambdaTest access key (securely injected from variable group)
